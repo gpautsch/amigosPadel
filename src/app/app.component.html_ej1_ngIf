@@ -1,0 +1,28 @@
+<app-cabecera></app-cabecera>
+<h1 class="container bg-dark text-white text-center my-4">ngif show={{show}}</h1>
+<div class="container">
+    <button class="btn btn-warning" (click)="show=!show">Acción</button>
+    <p class="text-info" *ngIf="show; else showDos">
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Facere, enim voluptate fugit similique illum unde sapiente tenetur tempore quidem numquam? Quis quia provident omnis officia. Odio numquam nemo optio distinctio?
+    </p>
+    <ng-template #showDos>
+        <p class="text-danger">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Facere, enim voluptate fugit similique illum unde sapiente tenetur tempore quidem numquam? Quis quia provident omnis officia. Odio numquam nemo optio distinctio?
+        </p>
+    </ng-template>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<app-footer></app-footer>

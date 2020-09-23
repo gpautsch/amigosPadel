@@ -119,6 +119,10 @@
           }
         }
       }
-    }},
-  "defaultProject": "amigosPadel"
+    }
+  },
+  "defaultProject": "amigosPadel",
+  "cli": {
+    "analytics": "2b065877-1c36-4dcb-b58b-d1ab4b99ba87"
+  }
 }
