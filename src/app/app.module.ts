@@ -6,12 +6,20 @@ import { AppComponent } from './app.component';
 import { CabeceraComponent } from './cabecera/cabecera.component';
 import { FooterComponent } from './footer/footer.component';
 import { CuerpoComponent } from './cuerpo/cuerpo.component';
-import { Cuerpo2Component } from './cuerpo2/cuerpo2.component';
 import { ContactoComponent } from './contacto/contacto.component';
+import { InicioComponent } from './inicio/inicio.component';
+import { NosotrosComponent } from './nosotros/nosotros.component';
 
 //LUEGO ESTA CONSTANTE SE UTILIZA EN EL IMPORT
 const routes: Routes = [
-  { path: 'contacto', component: ContactoComponent }
+  { path: 'contacto', component: ContactoComponent },
+  { path: 'nosotros', component: NosotrosComponent },
+  { path: 'inicio', component: InicioComponent },
+  { path: '', component: InicioComponent, pathMatch: 'full'},
+  //{ path: '**', redirectTo: '/', pathMatch: 'full'}
+  //PODRIAMOS HACER LO DE ARRIBA, O BIEN AL COMOPONENTE nosotros PARA QUE NOS CONTACTE
+  // SOLO BASTA CON CAMBIAR LA / POR EL NOMBRE DEL COMPONENTE
+  { path: '**', redirectTo: 'nosotros', pathMatch: 'full'}
 ];
 
 @NgModule({
@@ -20,8 +28,9 @@ const routes: Routes = [
     CabeceraComponent,
     CuerpoComponent,
     FooterComponent,
-    Cuerpo2Component,
-    ContactoComponent
+    ContactoComponent,
+    InicioComponent,
+    NosotrosComponent
   ],
   imports: [
     BrowserModule,
