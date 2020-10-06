@@ -10,6 +10,9 @@ import { ContactoComponent } from './contacto/contacto.component';
 import { InicioComponent } from './inicio/inicio.component';
 import { NosotrosComponent } from './nosotros/nosotros.component';
 
+//SERVICIOS. TAMBIEN SE DEBE AGREGAR EN providers: [] AL FINAL DE ESTE MISMO ARCHIVO
+import { EquipoService } from './equipo.service'
+
 //LUEGO ESTA CONSTANTE SE UTILIZA EN EL IMPORT
 const routes: Routes = [
   { path: 'contacto', component: ContactoComponent },
@@ -36,7 +39,9 @@ const routes: Routes = [
     BrowserModule,
     RouterModule.forRoot(routes) 
   ],
-  providers: [],
+  providers: [
+    EquipoService
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
