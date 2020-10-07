@@ -27,4 +27,8 @@ export class EquipoService {
     return this.equipo;
   }
 
+  obtenerUno(i: number){
+    return this.equipo[i]
+  }
+
 }

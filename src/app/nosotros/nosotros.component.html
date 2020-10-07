@@ -5,10 +5,12 @@
     </p>
 
     <ul class="list-group">
-        <li class="list-group-item" *ngFor="let item of equipo">
+        <!--index as i CREA UN INDICE en ngFor PARA LUEGO PASAR AL COMPONENTE EQUIPO
+        UN ELEMENTO DEL ARRAY EN UNA RUTA DINAMICA-->
+        <li class="list-group-item" *ngFor="let item of equipo, index as i">
             <h6>Nombre: {{item.nombre}}</h6>
             <h6>Nombre: {{item.especialidad}}</h6>
-            <a href="#">Leer más</a>
+            <a [routerLink]="['/equipo',i]">Leer más</a>
         </li>
     </ul>
 

@@ -11,11 +11,14 @@ import { InicioComponent } from './inicio/inicio.component';
 import { NosotrosComponent } from './nosotros/nosotros.component';
 
 //SERVICIOS. TAMBIEN SE DEBE AGREGAR EN providers: [] AL FINAL DE ESTE MISMO ARCHIVO
-import { EquipoService } from './equipo.service'
+import { EquipoService } from './equipo.service';
+import { EquipoComponent } from './equipo/equipo.component'
 
 //LUEGO ESTA CONSTANTE SE UTILIZA EN EL IMPORT
 const routes: Routes = [
   { path: 'contacto', component: ContactoComponent },
+  //PASO UNA RUTA DINAMICA CON id AL COMPONENTE equipo
+  { path: 'equipo/:id', component: EquipoComponent },
   { path: 'nosotros', component: NosotrosComponent },
   { path: 'inicio', component: InicioComponent },
   { path: '', component: InicioComponent, pathMatch: 'full'},
@@ -33,7 +36,8 @@ const routes: Routes = [
     FooterComponent,
     ContactoComponent,
     InicioComponent,
-    NosotrosComponent
+    NosotrosComponent,
+    EquipoComponent
   ],
   imports: [
     BrowserModule,

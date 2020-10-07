@@ -1,4 +1,10 @@
 # AmigosPadel
+sudo ng serve --open
+# PARA GENERAR COMPONENTES
+ng g c contactos	
+# PARA GENERAR SERVICIOS
+ng g s equipo
+
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 10.0.7.
 
